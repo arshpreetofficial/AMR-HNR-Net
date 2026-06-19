@@ -1,0 +1,23 @@
+export CUDA_VISIBLE_DEVICES=1
+python single_train.py \
+--batch_size 8 \
+--accum_iter 1 \
+--root 1 \
+--checkpoints_dir1 /data/chwang/Log/AtlasNet/0_single \
+--checkpoints_dir2 /mnt/miah203/chwang/AtlasProject/Log \
+--cls_type single_atlas \
+--gpu_ids 2 \
+--workers 8 \
+--print_freq 1 \
+--save_epoch_freq 5 \
+--lr 5e-4 \
+--lr_policy lambda_exp \
+--lr_decay 0.9 \
+--warmup_epochs 5 \
+--epoch_count 40 \
+--class_num 2 \
+--lambda_init 0.7 \
+--lda_sh 1 \
+--lda_dis 1 \
+--lda_rec 1 \
+--name single_atlas_cnad
