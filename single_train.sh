@@ -3,8 +3,8 @@ python single_train.py \
 --batch_size 8 \
 --accum_iter 1 \
 --root 1 \
---checkpoints_dir1 /data/chwang/Log/AtlasNet/0_single \
---checkpoints_dir2 /mnt/miah203/chwang/AtlasProject/Log \
+--checkpoints_dir1 /data/arsh/Log/AtlasNet/0_single \
+--checkpoints_dir2 /mnt/pp/arsh/AtlasProject/Log \
 --cls_type single_atlas \
 --gpu_ids 2 \
 --workers 8 \
