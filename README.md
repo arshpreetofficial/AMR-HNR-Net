@@ -1,5 +1,5 @@
 
-# Scale-adaptive Multi-Resolution Neuroanatomical Representation Learning through biological topology-guided Hierarchical Neuroanatomical Reasoning for Brain Abnormality Analysis
+# Adaptive Multi-Resolution Neuroanatomical Representation Learning through biological topology-guided Hierarchical Neuroanatomical Reasoning for Brain Abnormality Analysis
 
 
 ## Overview
