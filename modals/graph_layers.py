@@ -4,7 +4,7 @@ import torch.nn.functional as F
 
 
 class SpectralGraphConvolution(nn.Module):
-    
+    """
     Spectral graph convolution used in HNR stage.
 
     Equation:
@@ -16,7 +16,7 @@ class SpectralGraphConvolution(nn.Module):
 
     Output:
         output:        [B, M, Fout]
-  
+    """
 
     def __init__(self, in_features: int, out_features: int, bias: bool = True):
         super().__init__()
@@ -48,7 +48,7 @@ class SpectralGraphConvolution(nn.Module):
 
 
 class GraphReasoningNetwork(nn.Module):
-    
+    """
     GCN-based topological reasoning block.
 
     Input:
@@ -57,7 +57,7 @@ class GraphReasoningNetwork(nn.Module):
 
     Output:
         graph_features: [B, M, Cout]
-  
+    """
 
     def __init__(
         self,
