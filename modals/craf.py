@@ -4,7 +4,7 @@ import torch.nn.functional as F
 
 
 class CrossResolutionAttentionFusion(nn.Module):
-    
+    """
     Cross-Resolution Attention Fusion module according to the paper.
 
     Equation implemented:
@@ -23,7 +23,7 @@ class CrossResolutionAttentionFusion(nn.Module):
 
     Output:
         fused_feature:  [B, C, D, H, W]
-    
+    """
 
     def __init__(self, channels: int, reduction_ratio: int = 8):
         super().__init__()
