@@ -1,11 +1,4 @@
-"""
-AMR-HNR-Net objective functions.
 
-Paper objective:
-L_total = L_focal + lambda_graph * L_graph_reg + eta_l2 * ||Theta||_2^2
-
-Used for CN/MCI/AD classification.
-"""
 
 from typing import Dict, Optional, Sequence
 import torch
