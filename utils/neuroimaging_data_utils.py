@@ -1,14 +1,4 @@
-"""
-Neuroimaging data utilities for AMR-HNR-Net.
 
-Expected CSV format:
-subject_id,image_path,label
-
-Labels:
-0 = CN
-1 = MCI
-2 = AD
-"""
 
 from pathlib import Path
 from typing import Dict, Sequence
