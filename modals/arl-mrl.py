@@ -6,10 +6,10 @@ from .craf import CrossResolutionAttentionFusion
 
 
 class Residual3DBlock(nn.Module):
-    
+    """
     3D residual block used in both global and local branches.
     This follows the paper's idea of residual 3D convolutional feature extraction.
-    
+    """
 
     def __init__(self, channels: int, groups: int = 8):
         super().__init__()
@@ -35,9 +35,9 @@ class Residual3DBlock(nn.Module):
 
 
 class ConvStem3D(nn.Module):
-    
+    """
     Initial 3D convolution stem.
-   
+    """
 
     def __init__(self, in_channels: int, out_channels: int, kernel_size: int, padding: int, groups: int = 8):
         super().__init__()
@@ -63,7 +63,7 @@ class ConvStem3D(nn.Module):
 
 
 class MultiResolutionLearning(nn.Module):
-   
+    """
     Multi-Resolution Learning module from the paper.
 
     Global branch:
@@ -78,7 +78,7 @@ class MultiResolutionLearning(nn.Module):
     Output:
         global_feature: [B, C, D/s, H/s, W/s]
         local_feature:  [B, C, D, H, W]
-    
+    """
 
     def __init__(
         self,
@@ -133,7 +133,7 @@ class MultiResolutionLearning(nn.Module):
 
 
 class AdaptiveRepresentationLearning(nn.Module):
-    
+    """
     Stage 1 of AMR-HNR-Net.
 
     Paper components:
@@ -146,7 +146,7 @@ class AdaptiveRepresentationLearning(nn.Module):
 
     Output:
         normalized_features: [B, C, D, H, W]
-   
+    """
 
     def __init__(
         self,
