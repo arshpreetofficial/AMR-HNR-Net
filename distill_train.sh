@@ -1,26 +1,23 @@
-export CUDA_VISIBLE_DEVICES=2
-python distill_train.py \
---batch_size 8 \
---accum_iter 1 \
---root 1 \
---checkpoints_dir1 /data/chwang/Log/AtlasNet/2_distill \
---checkpoints_dir2 /mnt/miah203/chwang/AtlasProject/3_distill \
---pretrained_multi /data/chwang/Log/AtlasNet/0_multi/MultiMoE_final_spmci \
---gpu_ids 0 \
---workers 8 \
---print_freq 1 \
---save_epoch_freq 5 \
---lr 5e-4 \
---lr_policy lambda_exp \
---lr_decay 0.9 \
---warmup_epochs 5 \
---epoch_count 40 \
---class_num 2 \
---lambda_init 0.7 \
---lda_sh 1 \
---lda_dis 1 \
---lda_rec 1 \
---lda_soft 1 \
---lda_attn 10 \
---lda_feat 1 \
---name Distill_cnad
+#!/bin/bash
+
+python train_amr_hnr_net.py \
+  --train_csv manifests/adni_train.csv \
+  --val_csv manifests/adni_val.csv \
+  --data_root data \
+  --atlas_path data/atlas/AAL90_MNI152.nii.gz \
+  --output_dir outputs/amr_hnr_training \
+  --input_size 96,96,96 \
+  --num_classes 3 \
+  --num_rois 90 \
+  --class_counts 320,380,250 \
+  --feature_channels 32 \
+  --graph_hidden 128 \
+  --graph_out 128 \
+  --epochs 300 \
+  --batch_size 2 \
+  --learning_rate 0.001 \
+  --gamma 2.0 \
+  --lambda_graph 0.01 \
+  --eta_l2 0.00001 \
+  --gpu_id 0 \
+  --amp
