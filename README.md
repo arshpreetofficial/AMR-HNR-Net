@@ -67,7 +67,7 @@ Adaptive Representation Learning
     ↓
 Hierarchical Neuroanatomical Reasoning
     ├── Slice-Level Attention
-    ├── AAL-90 ROI Aggregation
+    ├── AAL ROI Aggregation
     └── Graph Convolutional Network
     ↓
 CN / MCI / AD Classification
