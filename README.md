@@ -19,7 +19,7 @@ To resolve these structural bottlenecks, our framework explicitly decouples visu
 
 <img width="6144" height="4096" alt="archi_new" src="https://github.com/user-attachments/assets/0c37dd85-420b-4914-8a97-2b2f66d3e81a" />
 
-## 🚀 Requirements
+## Requirements
 
 The framework has been tested on a Linux platform. Please ensure your environment meets the following dependencies (CUDA 11.3 is used as an example):
 
@@ -31,7 +31,7 @@ torchvision == 0.13.1+cu113
 numpy == 1.22.3
 ```
 
-## 📁 Data Preparation
+## Data Preparation
 
 Extensive experiments in our paper were conducted using one internal cohort and two external cohorts. Please ensure your data is properly preprocessed and organized before training:
 
@@ -39,6 +39,38 @@ Extensive experiments in our paper were conducted using one internal cohort and 
 * **OASIS** (Open Access Series of Imaging Studies )
 * **AIBL** (Australian Imaging, Biomarker & Lifestyle Flagship Study of Ageing)
 
+## Adaptive Multi-Resolution Neuroanatomical Representation Learning through Hierarchical Neuroanatomical Reasoning Network
+
+This repository provides the implementation of **AMR-HNR-Net**, a deep learning framework for structural MRI-based Alzheimer's disease analysis.
+
+The model performs **CN / MCI / AD classification** using a two-stage architecture:
+
+1. **Adaptive Representation Learning Stage**
+   - Multi-Resolution Learning
+   - Cross-Resolution Attention Fusion
+   - Group Normalization
+
+2. **Hierarchical Neuroanatomical Reasoning Stage**
+   - Slice-Level Attention
+   - AAL-90 Atlas-Guided ROI Aggregation
+   - Graph Convolutional Network-based Neuroanatomical Reasoning
+
+## Main Components
+
+
+3D sMRI Volume
+    ↓
+Adaptive Representation Learning
+    ├── Multi-Resolution Learning
+    ├── Cross-Resolution Attention Fusion
+    └── Group Normalization
+    ↓
+Hierarchical Neuroanatomical Reasoning
+    ├── Slice-Level Attention
+    ├── AAL-90 ROI Aggregation
+    └── Graph Convolutional Network
+    ↓
+CN / MCI / AD Classification
 
 
 
