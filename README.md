@@ -39,38 +39,6 @@ Extensive experiments in our paper were conducted using one internal cohort and 
 * **OASIS** (Open Access Series of Imaging Studies )
 * **AIBL** (Australian Imaging, Biomarker & Lifestyle Flagship Study of Ageing)
 
-## Adaptive Multi-Resolution Neuroanatomical Representation Learning through Hierarchical Neuroanatomical Reasoning Network
-
-This repository provides the implementation of **AMR-HNR-Net**, a deep learning framework for structural MRI-based Alzheimer's disease analysis.
-
-The model performs **CN / MCI / AD classification** using a two-stage architecture:
-
-1. **Adaptive Representation Learning Stage**
-   - Multi-Resolution Learning
-   - Cross-Resolution Attention Fusion
-   - Group Normalization
-
-2. **Hierarchical Neuroanatomical Reasoning Stage**
-   - Slice-Level Attention
-   - AAL-90 Atlas-Guided ROI Aggregation
-   - Graph Convolutional Network-based Neuroanatomical Reasoning
-
-## Main Components
-
-
-3D sMRI Volume
-    ↓
-Adaptive Representation Learning
-    ├── Multi-Resolution Learning
-    ├── Cross-Resolution Attention Fusion
-    └── Group Normalization
-    ↓
-Hierarchical Neuroanatomical Reasoning
-    ├── Slice-Level Attention
-    ├── AAL ROI Aggregation
-    └── Graph Convolutional Network
-    ↓
-CN / MCI / AD Classification
 
 
 
